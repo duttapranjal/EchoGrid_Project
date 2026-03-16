@@ -105,7 +105,7 @@
       <div class="result-card" style="text-align:center">
         <h3 style="justify-content:center"><i class="fa-solid fa-chart-pie" style="color:#67e8f9"></i> Skill Match</h3>
         <div class="chart-wrap">
-          <canvas id="skillChart"></canvas>
+          <canvas id="skillChart" data-matched="{{ matched_count }}" data-missing="{{ missing_count }}"></canvas>
         </div>
         <p style="color:var(--muted);font-size:14px;margin-top:14px">
           <span style="font-size:28px;font-weight:800;color:var(--text);display:block">{{ match_pct }}%</span>
@@ -125,12 +125,16 @@
 </div>
 
 <script>
-new Chart(document.getElementById('skillChart'), {
+const chartCanvas = document.getElementById('skillChart');
+const matchedCount = Number(chartCanvas.dataset.matched || 0);
+const missingCount = Number(chartCanvas.dataset.missing || 0);
+
+new Chart(chartCanvas, {
   type: 'doughnut',
   data: {
     labels: ['Matched', 'Missing'],
     datasets: [{
-      data: [{{ matched_count }}, {{ missing_count }}],
+      data: [matchedCount, missingCount],
       backgroundColor: ['rgba(16,185,129,.75)', 'rgba(239,68,68,.65)'],
       borderColor:     ['rgba(16,185,129,.25)', 'rgba(239,68,68,.25)'],
       borderWidth: 2, hoverOffset: 6
