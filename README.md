@@ -1,7 +1,5 @@
 # 🚀 AI-Powered Skill Gap Visualizer & Learning Path Generator
 
-🔗 Live Demo: https://id-preview--48c59514-c452-4e30-a862-7f0941e2e6ee.lovable.app/
-
 An AI-powered web application that analyzes user skills, compares them with industry requirements, calculates ATS score, identifies skill gaps, and generates a personalized learning roadmap.
 
 ---

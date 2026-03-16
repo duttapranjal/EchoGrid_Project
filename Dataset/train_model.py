@@ -1,10 +1,14 @@
+import os
 import pandas as pd
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 
+DATA_DIR = os.path.dirname(__file__)
+SKILLS_CSV_PATH = os.path.join(DATA_DIR, "skills_dataset.csv")
+
 # Load dataset
-df = pd.read_csv("skills_dataset.csv")
+df = pd.read_csv(SKILLS_CSV_PATH)
 
 # Group skills by job role
 grouped = df.groupby("job_role")["skill"].apply(list).reset_index()

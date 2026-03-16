@@ -1,6 +1,10 @@
+import os
 import pandas as pd
 
-df = pd.read_csv("skills_dataset.csv")
+DATA_DIR = os.path.dirname(__file__)
+SKILLS_CSV_PATH = os.path.join(DATA_DIR, "skills_dataset.csv")
+
+df = pd.read_csv(SKILLS_CSV_PATH)
 
 def get_required_skills(job_role):
     return df[df["job_role"] == job_role]["skill"].tolist()

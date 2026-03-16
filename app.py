@@ -144,6 +144,7 @@ def index():
             match_pct=match_pct,
         )
 
+
     return render_template('index.html')
 
 

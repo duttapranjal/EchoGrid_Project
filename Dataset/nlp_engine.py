@@ -1,21 +1,24 @@
+import os
 import pandas as pd
 import re
 import spacy
 import nltk
 from nltk.corpus import stopwords
-from  nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize
 
-from skill_gap import find_skill_gap
-from predict_job import model, mlb
-from ats_score import calculate_ats_score
-from learning_path import generate_learning_path
+from Dataset.skill_gap import find_skill_gap
+from Dataset.predict_job import model, mlb
+from Dataset.ats_score import calculate_ats_score
+from Dataset.learning_path import generate_learning_path
 
 nltk.download('punkt')
 nltk.download('stopwords')
 nlp = spacy.load('en_core_web_sm')
 
 # Load dataset
-df = pd.read_csv("skills_dataset.csv")
+DATA_DIR = os.path.dirname(__file__)
+SKILLS_CSV_PATH = os.path.join(DATA_DIR, "skills_dataset.csv")
+df = pd.read_csv(SKILLS_CSV_PATH)
 
 # Get all unique skills from dataset
 ALL_SKILLS = [s.lower() for s in df["skill"].unique()]
