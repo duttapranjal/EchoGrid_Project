@@ -39,7 +39,7 @@ The platform helps users understand their career readiness and provides clear gu
 - Flask
 
 ### Database
-- MongoDB / SQLite
+- SQLite
 
 ### AI / NLP
 - spaCy
