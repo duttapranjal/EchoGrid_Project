@@ -32,6 +32,7 @@ The platform helps users understand their career readiness and provides clear gu
 - HTML
 - CSS
 - JavaScript
+- React
 - Modern UI with animations
 
 ### Backend
