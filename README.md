@@ -34,6 +34,7 @@ The platform helps users understand their career readiness and provides clear gu
 - JavaScript
 - React
 - Modern UI with animations
+- Smoot Transition 
 
 ### Backend
 - Python
