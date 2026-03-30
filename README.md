@@ -33,10 +33,11 @@ The platform helps users understand their career readiness and provides clear gu
 - CSS
 - JavaScript
 - Modern UI with animations
+- Tailwind CSS
 
 ### Backend
 - Python
-- Flask
+- FlaskAPI
 
 ### Database
 - MongoDB / SQLite
@@ -44,6 +45,7 @@ The platform helps users understand their career readiness and provides clear gu
 ### AI / NLP
 - spaCy
 - NLTK
+- Sklearn
 - Resume parsing
 - ATS score algorithm
 
