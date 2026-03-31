@@ -7,7 +7,6 @@ import sqlite3
 
 load_dotenv()
 
-
 def _has_real_google_credential(value):
     if not value:
         return False
@@ -19,10 +18,12 @@ def _has_real_google_credential(value):
     }
     return cleaned not in placeholders
 
+
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "skillgap_secret")
 app.config["GOOGLE_CLIENT_ID"] = os.getenv("GOOGLE_CLIENT_ID")
 app.config["GOOGLE_CLIENT_SECRET"] = os.getenv("GOOGLE_CLIENT_SECRET")
+
 
 oauth = OAuth(app)
 google = None
@@ -34,6 +35,7 @@ if _has_real_google_credential(app.config["GOOGLE_CLIENT_ID"]) and _has_real_goo
         server_metadata_url="https://accounts.google.com/.well-known/openid-configuration",
         client_kwargs={"scope": "openid email profile"},
     )
+
 
 # ── Job Roles & Required Skills ──────────────────────────────────────────────
 JOB_ROLES = {

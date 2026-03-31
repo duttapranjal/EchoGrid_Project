@@ -31,13 +31,14 @@ The platform helps users understand their career readiness and provides clear gu
 ### Frontend
 - HTML
 - CSS
+- Tilwind CSS
 - JavaScript
 - Modern UI with animations
 - Tailwind CSS
 
 ### Backend
 - Python
-- FlaskAPI
+- Flask
 
 ### Database
 - MongoDB / SQLite
